@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve --open",
-    "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
-    "lint": "eslint src/ --fix"
+    "start": "webpack serve --open --mode development",
+    "format": "prettier --write {*.js,src/**/*.{js,jsx}}",
+    "lint": "eslint src/ --fix",
+    "deploy": "npm run format && npm run build",
+    "hola": "node"
   },
   "keywords": [
     "react",
@@ -25,12 +27,13 @@
     "html-webpack-plugin": "5.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "serve": "^13.0.2",
     "style-loader": "3.2.1",
     "stylus": "0.54.8",
     "stylus-loader": "6.1.0",
-    "webpack": "5.50.0",
-    "webpack-cli": "4.7.2",
-    "webpack-dev-server": "3.11.2"
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.15.0",
